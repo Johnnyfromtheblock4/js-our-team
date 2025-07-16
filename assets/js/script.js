@@ -65,5 +65,14 @@ const renderCard = () => {
 
 //recupero gli elementi del dom che mi servono
 const teamContainer = document.getElementById("team-members");
+const addMember = document.getElementById("add-member");
 
-renderCard();
+
+//creo funzione per inserire nuova card al click
+addMember.addEventListener("click", function (event) {
+  //prevengo refresh pagina
+  event.preventDefault();
+
+
+});
+
