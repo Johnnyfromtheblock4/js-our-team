@@ -44,17 +44,29 @@ const generateCard = (member) => {
 
   //creo la variabile che contenga le info e l'html della card
   const memberCard = `<div class="col-12 col-md-4">
-          <div class="card" id="card">
-            <img src="assets/img/female1.png" alt="" />
+          <div class="card">
+            <img src="./assets/${member.img}" alt="" class="img-fluid/>
           </div>
           <div class="card-body">
-            <h4 class="text-center">Marco Bianchi</h4>
-            <p class="text-center">Designer</p>
+            <h4 class="text-center">${member.name}</h4>
+            <p class="text-center">${member.role}</p>
+            <p class="text-center">${member.email}</p>
           </div>
         </div>`;
 
   return memberCard;
 };
 
+//definisco una funzione per inserire le card in pagina
+const renderCard = () => {
+  for (let i = 0; i < teamMembers.length; i++) {
+    let card = generateCard(teamMembers[i]);
+
+    teamContainer.innerHTML += card;
+  }
+};
+
 //recupero gli elementi del dom che mi servono
 const teamContainer = document.getElementById("team-members");
+
+renderCard();
