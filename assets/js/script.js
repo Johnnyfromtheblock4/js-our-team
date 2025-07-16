@@ -40,16 +40,21 @@ const teamMembers = [
 //definisco la funzione che mi genera la struttura delle card
 const generateCard = ({ name, role, email, img }) => {
   //creo la variabile che contenga le info e l'html della card
-  const memberCard = `<div class="col-12 col-md-4">
-          <div class="card">
-            <img src="./assets/${img}" alt="" class="img-fluid"/>
-            <div class="card-body">
-              <h4 class="text-center">${name}</h4>
-              <p class="text-center">${role}</p>
-              <p class="text-center">${email}</p>
-            </div>
-          </div> 
-        </div>`;
+  const memberCard = 
+  `<div class="card mb-3 border-0 mb-5" style="max-width: 440px;">
+    <div class="row g-0 bg-black">
+      <div class="col-12 col-md-4">
+        <img src="./assets/${img}" alt="" class="img-fluid rounded-start"/>
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-white">${name}</h5>
+          <p class="card-text text-white">${role}</p>
+          <p class="card-text text-info">${email}</p>
+        </div>
+      </div>
+    </div>
+  </div>`;
 
   return memberCard;
 };

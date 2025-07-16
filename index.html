@@ -9,6 +9,12 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <title>js-our-team</title>
   </head>
@@ -17,8 +23,8 @@
       <div class="row">
         <!-- Titolo -->
         <div class="col-12">
-          <h1 class="text-center">OUR TEAM</h1>
-          <p class="text-center">
+          <h1 class="text-center mt-5 mb-5" id="title">Meet our Team</h1>
+          <p class="text-center mb-5">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit amet
             veritatis tenetur, repellendus, nesciunt tempore aliquid earum
             excepturi consectetur in tempora. Lorem ipsum dolor sit amet
@@ -29,7 +35,7 @@
       <div class="row" id="team-members"></div>
       <form action="#" class="bg-white">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 mb-2">
             <label for="name">Name</label>
             <input
               type="text"
@@ -39,7 +45,7 @@
               placeholder="Inserisci nome"
             />
           </div>
-          <div class="col-12">
+          <div class="col-12 mb-2">
             <label for="role">Role</label>
             <input
               type="text"
@@ -49,7 +55,7 @@
               placeholder="Inserisci ruolo"
             />
           </div>
-          <div class="col-12">
+          <div class="col-12 mb-2">
             <label for="email">Email</label>
             <input
               type="text"
@@ -59,7 +65,7 @@
               placeholder="Inserisci email"
             />
           </div>
-          <div class="col-12">
+          <div class="col-12 mb-2">
             <label for="image">Image</label>
             <input
               type="text"
@@ -70,11 +76,7 @@
             />
           </div>
           <div class="col-12">
-            <button
-              type="submit"
-              class="btn btn-secondary"
-              id="add-member"
-            >
+            <button type="submit" class="btn btn-primary" id="add-member">
               Aggiungi
             </button>
           </div>
