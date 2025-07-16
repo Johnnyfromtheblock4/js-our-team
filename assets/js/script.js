@@ -73,6 +73,26 @@ addMember.addEventListener("click", function (event) {
   //prevengo refresh pagina
   event.preventDefault();
 
+  //svuoto il container
+  teamContainer.innerHTML = "";
 
+  //recupero i valori inseriti nel form
+  let name = document.getElementById("name").value;
+  let role = document.getElementById("role").value;
+  let email = document.getElementById("email").value;
+  let image = document.getElementById("image").value;
+
+  //creo nuovo oggetto contenente i valori del form
+  let newMember = {
+    name,
+    role,
+    email,
+    image,
+  };
+
+  teamMembers.push(newMember);
+
+  renderCard();
 });
 
+renderCard();
