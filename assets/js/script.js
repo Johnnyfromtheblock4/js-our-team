@@ -67,7 +67,6 @@ const renderCard = () => {
 const teamContainer = document.getElementById("team-members");
 const addMember = document.getElementById("add-member");
 
-
 //creo funzione per inserire nuova card al click
 addMember.addEventListener("click", function (event) {
   //prevengo refresh pagina
@@ -87,7 +86,7 @@ addMember.addEventListener("click", function (event) {
     name,
     role,
     email,
-    image,
+    img: image,
   };
 
   teamMembers.push(newMember);
