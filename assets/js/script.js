@@ -38,20 +38,17 @@ const teamMembers = [
 ];
 
 //definisco la funzione che mi genera la struttura delle card
-const generateCard = (member) => {
-  //destrutturo l'oggetto
-  const { name, role, email, img } = member;
-
+const generateCard = ({ name, role, email, img }) => {
   //creo la variabile che contenga le info e l'html della card
   const memberCard = `<div class="col-12 col-md-4">
           <div class="card">
-            <img src="./assets/${member.img}" alt="" class="img-fluid/>
-          </div>
-          <div class="card-body">
-            <h4 class="text-center">${member.name}</h4>
-            <p class="text-center">${member.role}</p>
-            <p class="text-center">${member.email}</p>
-          </div>
+            <img src="./assets/${img}" alt="" class="img-fluid"/>
+            <div class="card-body">
+              <h4 class="text-center">${name}</h4>
+              <p class="text-center">${role}</p>
+              <p class="text-center">${email}</p>
+            </div>
+          </div> 
         </div>`;
 
   return memberCard;
